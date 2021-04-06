@@ -1,8 +1,4 @@
-/**
- * This file is just a silly example to show everything working in the browser.
- * When you're ready to start on your site, clear the file. Happy hacking!
- **/
-
+import { registerImage } from './lazy.js'
 //Crear imagen
 //`<div class="p-4"><img class="mx-auto" src="https://randomfox.ca/images/2.jpg" width="320" alt="fox"></div>`
 //agregar #imagen
@@ -32,6 +28,7 @@ const addButton = document.querySelector('button')
 const addImages = () => {
 	const newImage = createImageNode()
 	mountNode.append(newImage)
+	registerImage(newImage)
 }
 
 addButton.addEventListener('click', addImages)
